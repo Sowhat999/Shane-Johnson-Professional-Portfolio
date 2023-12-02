@@ -4,13 +4,13 @@ body {
 
 header {
     display: flex;
+    flex-basis: auto;
     justify-content: space-between;
     align-items: center;
     background-color: #1f487e;
     color: white;
     position: sticky;
     top: 0;
-    width: 100%;
     z-index: 1;
 }
 
@@ -86,9 +86,9 @@ p {
     width: 80vw;
 }
 
-#about-img {
-    max-height: 400px;
-    max-width: auto;
+#about-image {
+    max-height: auto;
+    max-width: 40vw;
 }
 
 #about h3 {
@@ -133,7 +133,7 @@ p {
     height: auto;
 }
 
-#test {
+#sub-work-samples {
     display: flex;
 }
 
@@ -227,4 +227,92 @@ p {
 
 #contact-info a:hover {
     color: #85c7de;
+}
+
+@media (min-width: 320px) and (max-width: 860px) {
+    header {
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    #work {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact {
+        flex-direction: column;
+    }
+
+    .sub-header {
+        width: 100vw;
+        border-right: none;
+        border-bottom: 2px solid #6290c8;
+    }
+
+    #about-image {
+        max-width: 80vw;
+    }
+
+    #about-bottom {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    #about-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #contact-info h3 {
+        font-size: 20px;
+    }
+
+    #portfolio-website-image {
+        width: 90vw;
+    }
+
+    #sub-work-samples {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #horiseon {
+        padding: 0;
+    }
+
+    #landing-page {
+        padding: 0;
+    }
+
+    .sub-showcase-image {
+        width: 90vw;
+    }
+
+    #contact-info {
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .contact-group {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 375px) {
+    .contact-method {
+        font-size: 16px;
+    }
+
+    #contact-info a {
+        font-size: 16px;
+    }
 }
